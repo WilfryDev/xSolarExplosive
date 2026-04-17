@@ -1,0 +1,138 @@
+/*
+ *  xSolarExplosive - Plugin desenvolvido por xPlugins Org
+ *  Copyright (c) 2026. Todos los derechos reservados.
+ *  Prohibida su venta o distribución sin autorización.
+ */
+
+#         __       _             __            _           _           
+# __  __/ _\ ___ | | __ _ _ __ /__\_  ___ __ | | ___  ___(_)_   _____ 
+# \ \/ /\ \ / _ \| |/ _` | '__/_\ \ \/ / '_ \| |/ _ \/ __| \ \ / / _ \
+#  >  < _\ \ (_) | | (_| | | //__  >  <| |_) | | (_) \__ \ |\ V /  __/
+# /_/\_\\__/\___/|_|\__,_|_| \__/ /_/\_\ .__/|_|\___/|___/_| \_/ \___|
+#                                      |_|   
+#                              xPlugins Org
+#                        Support hex colors: &#RRGGBB
+#                          Support legacy colors: &c
+
+pickaxes:
+  solar_alpha:
+    display_name: "&#FFAA00&lSOLAR &#FFD400&lALPHA"
+    material: "NETHERITE_PICKAXE"
+    radius: 3 # Size of explosion
+    mode: "RADIUS" # RADIUS (Cubic) or TNT (Real explosion)
+    unbreakable: true
+    hide_flags: true
+    enchantments:
+      - "DIG_SPEED:5"
+      - "DURABILITY:3"
+    lore:
+      - ""
+      - "&7Un pico forjado en el núcleo solar."
+      - "&7Capaz de desintegrar bloques cercanos."
+      - ""
+      - "&eExplosión: &f3x3"
+      - "&eRareza: &6&lLEGENDARIO"
+      - ""
+
+  solar_nova:
+    display_name: "&#FF4500&lSOLAR &#FFD400&lNOVA"
+    material: "NETHERITE_PICKAXE"
+    radius: 5 # Size of explosion
+    mode: "RADIUS"
+    unbreakable: true
+    hide_flags: true
+    enchantments:
+      - "DIG_SPEED:10"
+      - "DURABILITY:5"
+    lore:
+      - ""
+      - "&7El poder de una supernova en tus manos."
+      - ""
+      - "&eExplosión: &f5x5"
+      - "&eRareza: &4&lMÍTICO"
+      - ""
+
+  explosivo:
+    display_name: "&#D0FFD3🔥 &fPico &7▸ &#D0FFD3&lE&#CEF7DB&lX&#CBEFE2&lP&#C9E6EA&lL&#C6DEF1&lO&#C0E6CE&lS&#BBEFAB&lI&#B5F787&lV&#AFFF64&lO"
+    material: "NETHERITE_PICKAXE"
+    radius: 3 # Power of TNT
+    mode: "TNT" # Standard TNT explosion (No damage)
+    unbreakable: true
+    hide_flags: true
+    enchantments:
+      - "DIG_SPEED:1"
+      - "DURABILITY:1"
+    lore:
+      - "&8Temporada N7"
+      - ""
+      - "&8| &#D0FFD3Encantamientos:"
+      - "  &8• &fEficiencia &#D0FFD3I"
+      - "  &8• &fIrrompibilidad &#AFFF64I"
+      - ""
+      - "&8| &fExplosión: &#C6DEF15x5"
+      - "&8| &fRareza: &4&lMÍTICO"
+
+messages:
+  no_permission: "&c ✘ ¡Error! &fNo tienes permisos."
+  reload: "&#77DD77 ✔ ¡Éxito! &fConfiguración recargada."
+  give_usage: "&#D0FFD3🔥 ¡Oye! &fUsa, /solar give <player> <id>"
+  player_not_found: "&c ⚠ ¡Ups! Jugador no encontrado."
+  pickaxe_not_found: "&c ⚠ ¡Ups! &fEl pickaxe especificado no existe."
+  received: "&#D0FFD3 ℹ ¡Información! &fHas recibido el pico: %name%"
+  help_message:
+    - ""
+    - "  &#D0FFD3&lxSolarExplosive &7- &#D0FFD3Panel de Admin"
+    - ""
+    - " &#D0FFD3 /solar &7- &fMenú global de picos explosivos."
+    - " &#D0FFD3 /solar give <usuario> <id> &7- &fDar un pico específico."
+    - " &#D0FFD3 /solar gui &7- &fAbrir menú de picos."
+    - " &#D0FFD3 /solar reload &7- &fRecarga administrativa del plugin."
+    - ""
+
+gui:
+  title: "&8     Centro de Trabajos | xPlugins"
+  size: 54
+
+  items:
+    pico:
+      slot: 0
+      material: DIAMOND_PICKAXE
+      name: "&fMenú &7▸ &#A2FF5CTrabajos"
+      lore:
+        - "&8Sección actual"
+        - ""
+        - "&f Elige una profesión y súbela de nivel"
+        - "&f para ganar dinero y recompensas."
+        - ""
+        - "&#A2FF5C ▸ Estás en la sección de Trabajos ✔"
+        - ""
+      actions: []
+
+    pane_09: { slot: 9, material: BLACK_STAINED_GLASS_PANE, name: "&7", lore: [""], actions: [] }
+    pane_11: { slot: 11, material: GRAY_STAINED_GLASS_PANE, name: "&7", lore: [""], actions: [] }
+    pane_12: { slot: 12, material: GRAY_STAINED_GLASS_PANE, name: "&7", lore: [""], actions: [] }
+    pane_13: { slot: 13, material: GRAY_STAINED_GLASS_PANE, name: "&7", lore: [""], actions: [] }
+    pane_14: { slot: 14, material: GRAY_STAINED_GLASS_PANE, name: "&7", lore: [""], actions: [] }
+    pane_15: { slot: 15, material: GRAY_STAINED_GLASS_PANE, name: "&7", lore: [""], actions: [] }
+    pane_16: { slot: 16, material: GRAY_STAINED_GLASS_PANE, name: "&7", lore: [""], actions: [] }
+
+    pane_47: { slot: 47, material: GRAY_STAINED_GLASS_PANE, name: "&7", lore: [""], actions: [] }
+    pane_48: { slot: 48, material: BLACK_STAINED_GLASS_PANE, name: "&7", lore: [""], actions: [] }
+
+    close:
+      slot: 49
+      material: IRON_DOOR
+      name: "&#FF4747 ✘ Cerrar"
+      lore:
+        - "&8Acción rápida"
+        - ""
+        - "&f Cierra este inventario   "
+        - "&f y regresa al juego.   "
+        - ""
+        - "&c ▸ Click para cerrar ◂  "
+        - ""
+      actions:
+        - "[CLOSE]"
+
+    pane_50: { slot: 50, material: BLACK_STAINED_GLASS_PANE, name: "&7", lore: [""], actions: [] }
+    pane_51: { slot: 51, material: GRAY_STAINED_GLASS_PANE, name: "&7", lore: [""], actions: [] }
