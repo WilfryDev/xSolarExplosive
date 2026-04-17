@@ -1,0 +1,16 @@
+name: xSolarExplosive
+version: ${version}
+main: es.xplugins.xsolarexplosive.XSolarExplosive
+author: xPlugins
+website: https://xplugins.es
+
+api-version: '1.19'
+
+commands:
+  solarpickaxe:
+    description: Main command for SolarPickaxe
+    aliases: [solar, spickaxe]
+permissions:
+  xsolarexplosive.admin:
+    description: Admin permission for SolarPickaxe
+    default: op
